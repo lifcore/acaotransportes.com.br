@@ -22,13 +22,13 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA REALIZAR CONTATO */}
+        {/* CTA PRIMÁRIO — SOLICITAR COTAÇÃO */}
         <div className="flex items-center gap-4">
           <Link
-            href="/contato"
-            className="rounded bg-[#7894A8] px-5 py-2.5 text-sm font-semibold text-[#071B2D] transition-all hover:bg-white hover:shadow-lg"
+            href="/cotacao"
+            className="rounded bg-[#C5A15A] px-6 py-3 text-sm font-bold uppercase tracking-wide text-[#071B2D] transition-all hover:bg-white hover:shadow-lg"
           >
-            Realizar Contato
+            Solicitar Cotação
           </Link>
         </div>
       </div>

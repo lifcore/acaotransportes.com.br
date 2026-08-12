@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* COLUNA 3: SOLUÇÕES & TECNOLOGIA */}
           <div>
-            <h4 className="text-md font-semibold text-white mb-4 border-b border-[#123B57] pb-2">Soluções & Gestão</h4>
+            <h4 className="text-md font-semibold text-white mb-4 border-b border-[#123B57] pb-2">Soluções & Tecnologia</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link href="/solucoes" className="hover:text-[#7894A8]">Cargas Gerais, Refrigeradas e Perigosas</Link></li>
               <li><Link href="/solucoes#dedicados" className="hover:text-[#7894A8]">Veículos Dedicados</Link></li>
@@ -42,7 +42,8 @@ export default function Footer() {
           <div>
             <h4 className="text-md font-semibold text-white mb-4 border-b border-[#123B57] pb-2">Atendimento</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/contato" className="text-[#C5A15A] font-medium hover:underline">Canais de Contato</Link></li>
+              <li><Link href="/cotacao" className="text-[#C5A15A] font-bold hover:underline">Solicitar Cotação</Link></li>
+              <li><Link href="/contato" className="hover:text-[#7894A8]">Canais de Contato</Link></li>
               <li>
                 <a href={siteConfig.contato.whatsappLink('Atendimento comercial via site')} target="_blank" rel="noreferrer" className="hover:text-[#7894A8]">
                   WhatsApp: {siteConfig.contato.telefone}
