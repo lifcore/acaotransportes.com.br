@@ -1,58 +1,56 @@
+import { siteConfig } from '@/config/site';
+
+const recursos = [
+  { title: 'TMS', desc: 'Gestão da operação e da frota.' },
+  { title: 'DMS', desc: 'Gestão das entregas e etapas da operação.' },
+  { title: 'Telemetria', desc: 'Informações da operação e comportamento dos veículos.' },
+  { title: 'App do Motorista', desc: 'Apoio ao motorista e acompanhamento da operação.' },
+  { title: 'Monitoramento em Tempo Real', desc: 'Visibilidade sobre as operações em andamento.' },
+  { title: 'Gestão de Manutenção', desc: 'Controle preventivo e disponibilidade da frota.' },
+  { title: 'Gestão de Rotas', desc: 'Planejamento e avaliação de rotas mais eficientes.' },
+  { title: 'Relatórios', desc: 'Indicadores para acompanhamento do desempenho operacional.' },
+  { title: 'Gestão de Risco', desc: 'Processos voltados à segurança e mitigação de riscos.' },
+];
+
 export default function TecnologiaEGestaoPage() {
   return (
     <>
       {/* HERO DA PÁGINA */}
-      <section className="py-16 bg-[#071B2D] text-white text-center border-b border-[#123B57]">
-        <div className="mx-auto max-w-[800px] px-5">
-          <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Inovação Aplicada</span>
-          <h1 className="text-3xl sm:text-4xl font-bold mt-2">Tecnologia & Gestão</h1>
+      <section className="relative py-16 bg-[#071B2D] text-white text-center border-b border-[#123B57] overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/tecnologia-inovacao.jpg"
+            alt="Operador com EPI utilizando empilhadeira em armazém"
+            className="h-full w-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-[#071B2D]/60" />
+        </div>
+        <div className="relative mx-auto max-w-[800px] px-5">
+          <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Tecnologia & Gestão</span>
+          <h1 className="text-3xl sm:text-4xl font-bold mt-2 mb-4">
+            Tecnologia para controlar. Gestão para decidir. Experiência para executar.
+          </h1>
         </div>
       </section>
 
-      {/* INOVAÇÃO APLICADA */}
+      {/* GRID DE RECURSOS */}
       <section className="py-20 bg-[#FAF9F6] text-[#071B2D]">
         <div className="mx-auto max-w-[1200px] px-5">
-          <div className="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Inovação Aplicada</span>
-              <h2 className="text-3xl font-bold mt-1">Tecnologia a serviço do transporte</h2>
-              <p className="text-gray-600 text-sm mt-2">A tecnologia entra como suporte à operação para assegurar controle e pontualidade.</p>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-md">
-              <img
-                src="/images/tecnologia-inovacao.jpg"
-                alt="Operador com EPI utilizando empilhadeira em armazém"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+          <div className="mb-12 max-w-[800px]">
+            <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Inovação Aplicada</span>
+            <h2 className="text-3xl font-bold mt-1 mb-4">Tecnologia a serviço do transporte</h2>
+            <p className="text-gray-700 leading-relaxed">
+              A tecnologia entra na nossa operação como suporte direto ao dia a dia — não como enfeite. O TMS organiza rotas e frota antes mesmo da carga sair; o DMS acompanha cada etapa da entrega em tempo real; a telemetria mostra o comportamento dos veículos na estrada; e os relatórios transformam tudo isso em decisão. Na prática, isso significa mais previsibilidade pra você e menos surpresa no meio do caminho.
+            </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded border border-gray-200">
-              <div className="text-[#123B57] font-extrabold text-2xl mb-2">TMS</div>
-              <h4 className="font-bold mb-2">Gestão Operacional</h4>
-              <p className="text-xs text-gray-600">Controle completo de frotas, rotas e rotinas logísticas.</p>
-            </div>
-            <div className="bg-white p-6 rounded border border-gray-200">
-              <div className="text-[#123B57] font-extrabold text-2xl mb-2">DMS</div>
-              <h4 className="font-bold mb-2">Acompanhamento</h4>
-              <p className="text-xs text-gray-600">Gestão detalhada do fluxo e das etapas de entrega.</p>
-            </div>
-            <div className="bg-white p-6 rounded border border-gray-200">
-              <div className="text-[#123B57] font-extrabold text-2xl mb-2">Monitoramento</div>
-              <h4 className="font-bold mb-2">Tempo Real</h4>
-              <p className="text-xs text-gray-600">Visibilidade constante da carga durante todo o trajeto.</p>
-            </div>
-            <div className="bg-white p-6 rounded border border-gray-200">
-              <div className="text-[#123B57] font-extrabold text-2xl mb-2">Gestão de Risco</div>
-              <h4 className="font-bold mb-2">Segurança Ativa</h4>
-              <p className="text-xs text-gray-600">Processos estruturados para mitigação de riscos na estrada.</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {recursos.map((r) => (
+              <div key={r.title} className="bg-white p-6 rounded border border-gray-200">
+                <h4 className="font-bold mb-2">{r.title}</h4>
+                <p className="text-xs text-gray-600">{r.desc}</p>
+              </div>
+            ))}
           </div>
-
-          <p className="text-center font-semibold text-sm text-[#123B57] mt-10">
-            &quot;30 anos de experiência não significam uma empresa parada no tempo.&quot;
-          </p>
         </div>
       </section>
 
@@ -63,48 +61,57 @@ export default function TecnologiaEGestaoPage() {
             <div>
               <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Gestão de Frota</span>
               <h2 className="text-3xl font-bold mt-2 mb-6 text-white">App do Motorista</h2>
-              <p className="text-[#F1EDE3] leading-relaxed mb-4">
-                Hoje contamos com um aplicativo próprio de gestão de frota, que permite o monitoramento em tempo real das operações em andamento.
-              </p>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                Mais detalhes sobre os recursos do app serão publicados em breve nesta página.
+              <p className="text-[#F1EDE3] leading-relaxed">
+                Apoio ao motorista e acompanhamento da operação, com monitoramento em tempo real das atividades em andamento.
               </p>
             </div>
-            {/* IMAGEM/MOCKUP DO APP — aguardando material real (print de tela ou foto do app em uso) */}
-            <div className="rounded-lg border-2 border-dashed border-[#7894A8]/40 bg-[#071B2D] py-16 px-6 text-center">
-              <p className="text-sm font-semibold text-[#7894A8]">Imagem/print do App do Motorista — em breve</p>
+            <div className="rounded-lg overflow-hidden shadow-md">
+              <img
+                src="https://images.unsplash.com/photo-1600320254374-ce2d293c324e?auto=format&fit=crop&w=1200&q=80"
+                alt="Motorista utilizando aplicativo no veículo"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* FERRAMENTA EXCLUSIVA — SIMULADOR DE FRETE (RESERVADO) */}
-      <section id="calculadora" className="py-20 bg-white text-[#071B2D] scroll-mt-20">
-        <div className="mx-auto max-w-[1200px] px-5 text-center">
-          <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Ferramenta Exclusiva</span>
-          <h2 className="text-3xl font-bold mt-2 mb-4">Simulador de Frete</h2>
-          <p className="text-gray-600 text-sm max-w-[600px] mx-auto mb-10">
-            Em breve, calcule uma estimativa de frete diretamente aqui no site, com base na origem, destino e tipo de carga.
-          </p>
-          {/* ESPAÇO RESERVADO — embed da calculadora entra aqui quando o ajuste dela estiver pronto */}
-          <div className="mx-auto max-w-[700px] rounded-lg border-2 border-dashed border-[#7894A8]/40 bg-[#FAF9F6] py-16 px-6">
-            <p className="text-sm font-semibold text-[#7894A8]">Simulador de Frete — em breve</p>
+      {/* MONITORAMENTO EM TEMPO REAL */}
+      <section className="py-20 bg-[#FAF9F6] text-[#071B2D]">
+        <div className="mx-auto max-w-[1200px] px-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="rounded-lg overflow-hidden shadow-md order-2 lg:order-1">
+              <img
+                src="https://images.unsplash.com/photo-1551913363-3ee43854c682?auto=format&fit=crop&w=1200&q=80"
+                alt="Motorista ao volante durante a operação"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Visibilidade da Operação</span>
+              <h2 className="text-3xl font-bold mt-2 mb-6">Monitoramento em tempo real</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Gestão de rotas, gestão de manutenção e relatórios de desempenho trabalham juntos para dar visibilidade completa sobre cada operação em andamento — da saída à entrega.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* NOTÍCIAS DE TRANSPORTE (RESERVADO) */}
-      <section className="py-20 bg-[#F1EDE3] text-[#071B2D]">
-        <div className="mx-auto max-w-[1200px] px-5 text-center">
-          <span className="text-sm font-bold text-[#123B57] uppercase tracking-wider">Fique por Dentro</span>
-          <h2 className="text-3xl font-bold mt-2 mb-4">Notícias de Transporte</h2>
-          <p className="text-gray-600 text-sm max-w-[600px] mx-auto mb-10">
-            Em breve, notícias e novidades do setor de transporte e logística direto aqui.
+      {/* MENSAGEM CENTRAL + CTA */}
+      <section className="py-20 bg-[#071B2D] text-white text-center">
+        <div className="mx-auto max-w-[700px] px-5">
+          <p className="text-xl font-semibold text-[#F1EDE3] mb-8">
+            &quot;A tecnologia não substitui nossa experiência. Ela aumenta nossa capacidade de controlar a operação.&quot;
           </p>
-          {/* ESPAÇO RESERVADO — aguardando conteúdo real (artigos/notícias) para publicar */}
-          <div className="mx-auto max-w-[700px] rounded-lg border-2 border-dashed border-[#7894A8]/40 bg-white py-16 px-6">
-            <p className="text-sm font-semibold text-[#7894A8]">Notícias de Transporte — em breve</p>
-          </div>
+          <a
+            href={siteConfig.contato.whatsappLink('Olá, gostaria de saber mais sobre a tecnologia e gestão da Ação Transportes.')}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-bold text-[#C5A15A] hover:underline"
+          >
+            Fale com nosso comercial →
+          </a>
         </div>
       </section>
     </>

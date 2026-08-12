@@ -28,7 +28,7 @@ export default function Header() {
             href="/cotacao"
             className="rounded bg-[#C5A15A] px-6 py-3 text-sm font-bold uppercase tracking-wide text-[#071B2D] transition-all hover:bg-white hover:shadow-lg"
           >
-            Solicitar Cotação
+            Solicitar Contato
           </Link>
         </div>
       </div>

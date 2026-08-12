@@ -59,13 +59,6 @@ export default function CotacaoPage() {
                   <input required type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-[#071B2D] mb-1">Cidade de Destino *</label>
-                  <input required type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
                   <label className="block text-xs font-bold text-[#071B2D] mb-1">Tipo de Carga *</label>
                   <select required className="w-full border border-gray-300 p-2.5 rounded text-sm">
                     <option value="">Selecione...</option>
@@ -76,10 +69,6 @@ export default function CotacaoPage() {
                     <option>Veículo Dedicado</option>
                     <option>Outro</option>
                   </select>
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-[#071B2D] mb-1">Peso / Volume Estimado</label>
-                  <input type="text" placeholder="Ex: 2 toneladas / 5m³" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                 </div>
               </div>
 

@@ -29,25 +29,33 @@ export default function EmpresaPage() {
   return (
     <>
       {/* HERO DA PÁGINA */}
-      <section className="py-16 bg-[#071B2D] text-white text-center border-b border-[#123B57]">
-        <div className="mx-auto max-w-[800px] px-5">
+      <section className="relative py-20 bg-[#071B2D] text-white text-center border-b border-[#123B57] overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/solucoes-hero.jpg"
+            alt="Frota de caminhões da Ação Transportes"
+            className="h-full w-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-[#071B2D]/55" />
+        </div>
+        <div className="relative mx-auto max-w-[800px] px-5">
           <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Institucional</span>
-          <h1 className="text-3xl sm:text-4xl font-bold mt-2">A Empresa</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mt-2 mb-4">Uma história construída na estrada. Uma nova fase pela frente.</h1>
         </div>
       </section>
 
-      {/* TRADIÇÃO & EVOLUÇÃO */}
+      {/* EXPERIÊNCIA QUE EVOLUI */}
       <section className="py-20 bg-[#FAF9F6] text-[#071B2D]">
         <div className="mx-auto max-w-[1200px] px-5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Tradição & Evolução</span>
-              <h2 className="text-3xl font-bold mt-2 mb-6">Uma história construída na estrada. Uma nova fase pela frente.</h2>
+              <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Experiência que Evolui</span>
+              <h2 className="text-3xl font-bold mt-2 mb-6">1995 → 2026</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Desde 1995, a Ação Transportes atua no transporte rodoviário de cargas, construindo sólida reputação, parcerias duradouras e um profundo conhecimento das exigências operacionais do mercado.
+                Mais de três décadas de atuação ensinaram que transporte não é apenas deslocar uma carga. É entender pessoas, empresas, prazos, riscos e necessidades que mudam constantemente.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Hoje, vivemos uma importante etapa de modernização: processos aprimorados, gestão orientada a indicadores, tecnologia aplicada à operação e um atendimento ainda mais próximo de nossos clientes.
+                A nova fase mantém essa experiência e acrescenta novas ferramentas de gestão, tecnologia e controle.
               </p>
             </div>
             <div className="bg-[#071B2D] p-8 rounded-lg text-white border-l-4 border-[#C5A15A]">
@@ -61,31 +69,38 @@ export default function EmpresaPage() {
         </div>
       </section>
 
-      {/* CONFORMIDADE E LICENCIAMENTO */}
-      <section className="relative py-20 bg-[#071B2D] text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/images/empresa-conformidade.jpg"
-            alt="Aperto de mãos entre profissionais em área de contêineres, com EPI"
-            className="h-full w-full object-cover opacity-25"
-          />
-          <div className="absolute inset-0 bg-[#071B2D]/70" />
-        </div>
-        <div className="relative mx-auto max-w-[1200px] px-5">
-          <div className="max-w-[800px]">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#7894A8] mb-4">Conformidade e Licenciamento</h2>
-            <p className="text-sm text-gray-300 leading-relaxed mb-4">
-              Possuímos certificações e autorizações emitidas por órgãos competentes, incluindo Polícia Civil e Polícia Federal, para o transporte regulamentado de produtos químicos e perigosos elegíveis.
-            </p>
-            <p className="text-xs text-[#C5A15A]">
-              *Avaliação técnica prévia realizada para confirmação da classe de produto e especificação do veículo.
-            </p>
+      {/* CONFORMIDADE E OPERAÇÕES REGULAMENTADAS */}
+      <section className="py-20 bg-[#FAF9F6]">
+        <div className="mx-auto max-w-[1000px] px-5">
+          <div className="relative overflow-hidden rounded-2xl bg-[#071B2D] border-2 border-[#C5A15A] shadow-xl">
+            <div className="absolute inset-0">
+              <img
+                src="/images/empresa-conformidade.jpg"
+                alt="Aperto de mãos entre profissionais em área de contêineres, com EPI"
+                className="h-full w-full object-cover opacity-20"
+              />
+              <div className="absolute inset-0 bg-[#071B2D]/70" />
+            </div>
+            <div className="relative p-8 sm:p-12 text-center">
+              <span className="inline-block rounded-full bg-[#C5A15A] px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#071B2D] mb-6">
+                Autorização Especial
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                Poucas transportadoras têm essa autorização. A Ação tem.
+              </h2>
+              <p className="text-gray-200 leading-relaxed max-w-[700px] mx-auto mb-6">
+                Somos uma empresa conceituada no setor, com certificações e autorizações emitidas por órgãos competentes — incluindo <strong className="text-[#C5A15A]">Polícia Civil</strong> e <strong className="text-[#C5A15A]">Polícia Federal</strong> — para o transporte regulamentado de produtos químicos e perigosos elegíveis.
+              </p>
+              <p className="text-xs text-gray-400">
+                *Avaliação técnica prévia realizada para confirmação da classe de produto e especificação do veículo.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* PILARES DA OPERAÇÃO */}
-      <section className="py-20 bg-[#FAF9F6]">
+      <section id="pilares" className="py-20 bg-[#FAF9F6] scroll-mt-20">
         <div className="mx-auto max-w-[1200px] px-5">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-[#071B2D]">Pilares da Nossa Operação</h2>
@@ -97,19 +112,6 @@ export default function EmpresaPage() {
                 <p className="text-xs text-gray-600 leading-relaxed">{p.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* NOSSOS CLIENTES — RESERVADO, aguardando autorização dos parceiros */}
-      <section className="py-16 bg-[#F1EDE3] text-[#071B2D]">
-        <div className="mx-auto max-w-[1200px] px-5 text-center">
-          <h3 className="text-2xl font-bold mb-4">Nossos Clientes</h3>
-          <p className="text-sm text-gray-600 max-w-[600px] mx-auto mb-8">
-            Em breve, os logotipos de nossas empresas parceiras, assim que recebermos a autorização de divulgação de cada uma.
-          </p>
-          <div className="rounded-lg border-2 border-dashed border-[#7894A8]/40 bg-white py-10 px-6">
-            <p className="text-sm font-semibold text-[#7894A8]">Logos das empresas parceiras — em breve</p>
           </div>
         </div>
       </section>

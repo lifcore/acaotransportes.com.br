@@ -44,7 +44,7 @@ export default function HomePage() {
                 href="/cotacao"
                 className="rounded bg-[#C5A15A] px-8 py-4 text-sm font-bold uppercase tracking-wide text-[#071B2D] transition-colors hover:bg-white"
               >
-                Solicitar Cotação
+                Solicitar Contato
               </Link>
               <Link
                 href="/solucoes"
@@ -214,7 +214,7 @@ export default function HomePage() {
               href="/cotacao"
               className="inline-block rounded bg-[#C5A15A] px-8 py-4 text-sm font-bold uppercase tracking-wide text-[#071B2D] transition-colors hover:bg-white"
             >
-              Solicitar Cotação
+              Solicitar Contato
             </Link>
             <Link
               href="/trabalhe-conosco"
