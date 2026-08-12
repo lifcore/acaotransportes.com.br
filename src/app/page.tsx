@@ -21,9 +21,9 @@ export default function HomePage() {
           <img
             src="/images/hero-home.jpg"
             alt="Caminhão da Ação Transportes na estrada ao entardecer"
-            className="h-full w-full object-cover opacity-70"
+            className="h-full w-full object-cover opacity-90"
           />
-          <div className="absolute inset-0 bg-[#071B2D]/45" />
+          <div className="absolute inset-0 bg-[#071B2D]/30" />
         </div>
         <div className="relative mx-auto max-w-[1200px] px-5">
           <div className="max-w-[800px]">
@@ -125,9 +125,9 @@ export default function HomePage() {
           <img
             src="/images/empresa-conformidade.jpg"
             alt="Aperto de mãos entre profissionais em área de contêineres, com EPI"
-            className="h-full w-full object-cover opacity-30"
+            className="h-full w-full object-cover opacity-85"
           />
-          <div className="absolute inset-0 bg-[#071B2D]/60" />
+          <div className="absolute inset-0 bg-[#071B2D]/35" />
         </div>
         <div className="relative mx-auto max-w-[800px] px-5 text-center">
           <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Conformidade & Segurança</span>

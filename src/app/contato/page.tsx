@@ -15,9 +15,9 @@ export default function ContatoPage() {
           <img
             src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=1200&q=80"
             alt="Caminhão em operação"
-            className="h-full w-full object-cover opacity-30"
+            className="h-full w-full object-cover opacity-85"
           />
-          <div className="absolute inset-0 bg-[#071B2D]/60" />
+          <div className="absolute inset-0 bg-[#071B2D]/35" />
         </div>
         <div className="relative mx-auto max-w-[800px] px-5">
           <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Fale Conosco</span>

@@ -42,9 +42,9 @@ export default function SolucoesPage() {
           <img
             src="/images/solucoes-hero.jpg"
             alt="Frota de caminhões da Ação Transportes"
-            className="h-full w-full object-cover opacity-45"
+            className="h-full w-full object-cover opacity-90"
           />
-          <div className="absolute inset-0 bg-[#071B2D]/50" />
+          <div className="absolute inset-0 bg-[#071B2D]/30" />
         </div>
         <div className="relative mx-auto max-w-[800px] px-5">
           <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Cada operação exige uma solução diferente</span>
@@ -110,6 +110,19 @@ export default function SolucoesPage() {
                 Vamos conversar sobre sua operação →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* SEGMENTOS ATENDIDOS */}
+      <section className="py-16 bg-[#F1EDE3] text-[#071B2D]">
+        <div className="mx-auto max-w-[1200px] px-5">
+          <h3 className="text-2xl font-bold mb-8 text-center">Segmentos Atendidos</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {['Indústrias', 'Alimentício', 'Químico', 'Autopeças', 'Farmacêutico', 'Distribuição', 'Comércio', 'Outros Segmentos Corporativos'].map((item) => (
+              <div key={item} className="bg-white py-4 px-3 rounded text-center text-sm font-semibold border border-gray-200">
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>

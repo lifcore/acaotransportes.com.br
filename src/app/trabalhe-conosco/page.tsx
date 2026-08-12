@@ -13,9 +13,9 @@ export default function TrabalheConoscoPage() {
           <img
             src="https://images.unsplash.com/photo-1574757974346-45bae947d89a?auto=format&fit=crop&w=1200&q=80"
             alt="Motorista profissional em frente a caminhão"
-            className="h-full w-full object-cover opacity-30"
+            className="h-full w-full object-cover opacity-85"
           />
-          <div className="absolute inset-0 bg-[#071B2D]/60" />
+          <div className="absolute inset-0 bg-[#071B2D]/35" />
         </div>
         <div className="relative mx-auto max-w-[800px] px-5 text-center">
           <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Carreiras</span>

@@ -1,0 +1,55 @@
+SITE AÇÃO TRANSPORTES — LISTA DE IMAGENS
+==========================================
+
+Regra prática: se o arquivo existir em public/images com esse nome, é
+arraste-e-substitua (mesmo nome, sem mexer em código). Se for "LINK
+EXTERNO", não existe arquivo na pasta — manda a foto nova no chat que
+o Claude troca o link no código.
+
+
+ARQUIVOS LOCAIS (trocar direto em public/images/)
+--------------------------------------------------
+
+1. logo.png
+   Onde aparece: Header e Footer (logo da empresa)
+
+2. hero-home.jpg
+   Onde aparece: Fundo da Hero da Home
+
+3. empresa-conformidade.jpg
+   Onde aparece: Fundo do card de Conformidade em "A Empresa"
+
+4. solucoes-hero.jpg
+   Onde aparece: Hero da página "A Empresa" E Hero da página "Soluções"
+   (mesma foto usada nas duas páginas)
+
+5. solucoes-parceria.jpg
+   Onde aparece: Seção "Parceiro Dentro da Operação" em Soluções
+
+6. solucoes-especialidades.jpg
+   Onde aparece: Card "Cargas Gerais" em Soluções
+   >>> ESTE ESTÁ QUEBRADO HOJE — confira se o nome do arquivo na
+       pasta está EXATAMENTE assim (minúsculas, sem espaço)
+
+7. tecnologia-inovacao.jpg
+   Onde aparece: Grid de recursos em "Tecnologia & Gestão"
+
+8. trabalhe-conosco.jpg
+   Onde aparece: Primeira imagem em "Trabalhe Conosco"
+
+
+LINKS EXTERNOS (manda a foto nova no chat pra trocar)
+--------------------------------------------------------
+
+9. Card "Refrigerados" — página Soluções
+
+10. Card "Químicos & Perigosos" — página Soluções
+
+11. Seção "App do Motorista" — página Tecnologia & Gestão
+    (ideal: print real do app quando estiver pronto)
+
+12. Seção "Monitoramento em tempo real" — página Tecnologia & Gestão
+
+13. Segunda imagem (Hero) — página Trabalhe Conosco
+
+14. Hero da página Contato

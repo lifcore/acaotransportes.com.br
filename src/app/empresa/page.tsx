@@ -34,9 +34,9 @@ export default function EmpresaPage() {
           <img
             src="/images/solucoes-hero.jpg"
             alt="Frota de caminhões da Ação Transportes"
-            className="h-full w-full object-cover opacity-40"
+            className="h-full w-full object-cover opacity-85"
           />
-          <div className="absolute inset-0 bg-[#071B2D]/55" />
+          <div className="absolute inset-0 bg-[#071B2D]/30" />
         </div>
         <div className="relative mx-auto max-w-[800px] px-5">
           <span className="text-sm font-bold text-[#7894A8] uppercase tracking-wider">Institucional</span>
@@ -77,9 +77,9 @@ export default function EmpresaPage() {
               <img
                 src="/images/empresa-conformidade.jpg"
                 alt="Aperto de mãos entre profissionais em área de contêineres, com EPI"
-                className="h-full w-full object-cover opacity-20"
+                className="h-full w-full object-cover opacity-40"
               />
-              <div className="absolute inset-0 bg-[#071B2D]/70" />
+              <div className="absolute inset-0 bg-[#071B2D]/55" />
             </div>
             <div className="relative p-8 sm:p-12 text-center">
               <span className="inline-block rounded-full bg-[#C5A15A] px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#071B2D] mb-6">
