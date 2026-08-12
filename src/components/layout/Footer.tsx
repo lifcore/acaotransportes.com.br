@@ -9,10 +9,7 @@ export default function Footer() {
 
           {/* COLUNA 1: EMPRESA */}
           <div>
-            {/* LOGO — aguardando arquivo de imagem do cliente. Substituir por <Image src="/logo.svg" ... /> */}
-            <div className="flex h-10 w-40 items-center justify-center rounded border border-dashed border-[#7894A8]/40 text-[10px] uppercase tracking-wide text-[#7894A8]/60 mb-4">
-              logo aqui
-            </div>
+            <img src="/images/logo.png" alt="Ação Transportes" className="h-10 w-auto mb-4" />
             <p className="text-sm text-gray-300 mb-4 leading-relaxed">
               Mais de 30 anos de experiência conectando empresas com inteligência, gestão, segurança e eficiência operacional.
             </p>
@@ -45,9 +42,23 @@ export default function Footer() {
           <div>
             <h4 className="text-md font-semibold text-white mb-4 border-b border-[#123B57] pb-2">Atendimento</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/cotacao" className="text-[#C5A15A] font-medium hover:underline">Solicitar Cotação</Link></li>
-              <li><Link href="/contato" className="hover:text-[#7894A8]">Canais de Contato</Link></li>
-              <li><a href={siteConfig.contato.whatsappLink('Atendimento comercial via site')} target="_blank" rel="noreferrer" className="hover:text-[#7894A8]">WhatsApp Comercial</a></li>
+              <li><Link href="/contato" className="text-[#C5A15A] font-medium hover:underline">Canais de Contato</Link></li>
+              <li>
+                <a href={siteConfig.contato.whatsappLink('Atendimento comercial via site')} target="_blank" rel="noreferrer" className="hover:text-[#7894A8]">
+                  WhatsApp: {siteConfig.contato.telefone}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${siteConfig.contato.telefone.replace(/\D/g, '')}`} className="hover:text-[#7894A8]">
+                  Telefone: {siteConfig.contato.telefone}
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${siteConfig.contato.email}`} className="hover:text-[#7894A8] break-all">
+                  {siteConfig.contato.email}
+                </a>
+              </li>
+              <li className="text-xs text-gray-400 pt-1">{siteConfig.contato.endereco}</li>
             </ul>
           </div>
 
