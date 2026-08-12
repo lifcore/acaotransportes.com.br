@@ -1,17 +1,25 @@
 export const siteConfig = {
-  nome: 'Ação Transportes',
-  descricao: 'Soluções logísticas personalizadas para cargas secas, refrigeradas, congeladas e produtos perigosos, atendendo empresas em todo o Brasil.',
-  fundacao: 1995,
+  name: 'Ação Transportes',
+  razaoSocial: 'Ação Transportes de Jundiaí Ltda',
+  description:
+    'Há mais de 30 anos oferecendo soluções logísticas com segurança, agilidade e inteligência operacional.',
+  url: 'https://acaotransportes.com.br',
+  cnpj: '00.628.191/0001-30',
   contato: {
     telefone: '(11) 4587-9840',
-    telefoneLink: 'tel:1145879840',
     whatsapp: '551145879840',
+    email: 'comercial@acaotransportes.com.br',
+    endereco:
+      'Rua Prof. Bruno Rezende de Camargo, 99 - Sala 2, Vila Jundiainópolis, Jundiaí - SP, CEP 13206-630',
+    enderecoResumo: 'Sul e Sudeste - Atuação principal em SP, MG, PR e SC',
     whatsappLink: (mensagem: string) =>
       `https://wa.me/551145879840?text=${encodeURIComponent(mensagem)}`,
-    email: 'comercial@acaotransportes.com.br',
   },
-  endereco: {
-    completo: 'R. Prof. Bruno Rezende de Camargo, 99 - Vila Jundiainópolis, Jundiaí - SP, 13206-630',
-  },
-  cnpj: '00.628.191/0001-30',
-} as const;
+  navMenu: [
+    { label: 'A Empresa', href: '/empresa' },
+    { label: 'Soluções', href: '/solucoes' },
+    { label: 'Tecnologia & Gestão', href: '/tecnologia-e-gestao' },
+    { label: 'Trabalhe Conosco', href: '/trabalhe-conosco' },
+    { label: 'Contato', href: '/contato' },
+  ],
+};

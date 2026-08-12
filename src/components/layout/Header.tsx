@@ -1,49 +1,40 @@
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 
-export function Header() {
+export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-at-secondary bg-at-primary">
-      <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-5">
+    <header className="sticky top-0 z-50 bg-[#071B2D] text-white shadow-md border-b border-[#123B57]">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-4">
         {/* LOGO — aguardando arquivo de imagem do cliente. Substituir por <Image src="/logo.svg" ... /> */}
-        <Link href="/" className="flex h-10 w-40 items-center justify-center rounded border border-dashed border-at-secondary/40 text-[10px] uppercase tracking-wide text-at-secondary/60">
+        <Link
+          href="/"
+          className="flex h-10 w-40 items-center justify-center rounded border border-dashed border-[#7894A8]/40 text-[10px] uppercase tracking-wide text-[#7894A8]/60"
+        >
           logo aqui
         </Link>
 
-        <nav>
-          <ul className="flex flex-wrap items-center gap-[30px]">
-            <li>
-              <Link href="/#home" className="text-sm font-medium text-white transition-colors hover:text-at-secondary">
-                Início
-              </Link>
-            </li>
-            <li>
-              <Link href="/#posicionamento" className="text-sm font-medium text-white transition-colors hover:text-at-secondary">
-                A Empresa
-              </Link>
-            </li>
-            <li>
-              <Link href="/#solucoes" className="text-sm font-medium text-white transition-colors hover:text-at-secondary">
-                Soluções Logísticas
-              </Link>
-            </li>
-            <li>
-              <Link href="/#contato" className="text-sm font-medium text-white transition-colors hover:text-at-secondary">
-                Contato
-              </Link>
-            </li>
-            <li>
-              <a
-                href={siteConfig.contato.whatsappLink('Olá, gostaria de solicitar uma cotação para minha operação.')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded border border-at-secondary bg-at-secondary px-4 py-2 font-title text-[0.85rem] font-semibold text-at-primary transition-colors hover:border-at-secondary-hover hover:bg-at-secondary-hover hover:text-white"
-              >
-                Atendimento Comercial
-              </a>
-            </li>
-          </ul>
+        {/* NAVEGAÇÃO PRINCIPAL */}
+        <nav className="hidden md:flex items-center gap-6 text-[0.95rem] font-medium text-[#FAF9F6]">
+          {siteConfig.navMenu.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition-colors hover:text-[#7894A8]"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
+
+        {/* CTA SOLICITAR COTAÇÃO */}
+        <div className="flex items-center gap-4">
+          <Link
+            href="/cotacao"
+            className="rounded bg-[#7894A8] px-5 py-2.5 text-sm font-semibold text-[#071B2D] transition-all hover:bg-white hover:shadow-lg"
+          >
+            Solicitar Cotação
+          </Link>
+        </div>
       </div>
     </header>
   );

@@ -1,13 +1,6 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-at-primary: #1c1c1c; /* Preto Grafite */
-  --color-at-secondary: #c9a227; /* Dourado Fosco */
-  --color-at-secondary-hover: #b08d1e;
-  --color-at-bg-light: #f5f5f5;
-  --color-at-text-dark: #333333;
-  --color-at-text-light: #666666;
-
   --font-title: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
@@ -15,13 +8,15 @@
 @layer base {
   body {
     font-family: var(--font-body);
-    color: var(--color-at-text-dark);
+    color: #333333;
     background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title);
-    color: var(--color-at-primary);
+    /* sem cor fixa aqui de propósito — cada seção define a cor do texto
+       (ex: text-white em fundo escuro, text-[#071B2D] em fundo claro).
+       Uma cor fixa aqui apagaria títulos em fundos escuros. */
   }
 }

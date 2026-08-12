@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins, Inter } from 'next/font/google';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import './globals.css';
 
 const poppins = Poppins({
@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Ação Transportes | Soluções Logísticas de Alta Performance',
   description:
-    'Soluções logísticas personalizadas para cargas secas, refrigeradas, congeladas e produtos perigosos, atendendo empresas em todo o Brasil.',
+    'Há mais de 30 anos oferecendo soluções logísticas com segurança, agilidade e inteligência operacional.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
