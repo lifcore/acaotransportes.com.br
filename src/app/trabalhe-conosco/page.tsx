@@ -11,7 +11,7 @@ export default function TrabalheConoscoPage() {
       <section className="relative py-16 bg-[#071B2D] text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1574757974346-45bae947d89a?auto=format&fit=crop&w=1200&q=80"
+            src="/images/trabalhe-conosco-2.jpg"
             alt="Motorista profissional em frente a caminhão"
             className="h-full w-full object-cover opacity-85"
           />

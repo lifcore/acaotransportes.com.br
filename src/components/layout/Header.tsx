@@ -22,14 +22,16 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA PRIMÁRIO — SOLICITAR COTAÇÃO */}
+        {/* CTA PRIMÁRIO — WHATSAPP */}
         <div className="flex items-center gap-4">
-          <Link
-            href="/cotacao"
+          <a
+            href={siteConfig.contato.whatsappLink('Olá, gostaria de falar com o Depto. Comercial da Ação Transportes.')}
+            target="_blank"
+            rel="noreferrer"
             className="rounded bg-[#C5A15A] px-6 py-3 text-sm font-bold uppercase tracking-wide text-[#071B2D] transition-all hover:bg-white hover:shadow-lg"
           >
             Solicitar Contato
-          </Link>
+          </a>
         </div>
       </div>
     </header>

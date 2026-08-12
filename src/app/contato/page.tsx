@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 
 export default function ContatoPage() {
@@ -13,7 +12,7 @@ export default function ContatoPage() {
       <section className="relative py-16 bg-[#071B2D] text-white text-center border-b border-[#123B57] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=1200&q=80"
+            src="/images/contato-hero.jpg"
             alt="Caminhão em operação"
             className="h-full w-full object-cover opacity-85"
           />
@@ -67,13 +66,6 @@ export default function ContatoPage() {
                 <div className="text-xs font-bold text-[#7894A8] uppercase mb-1">Endereço — Ver no mapa</div>
                 <div className="text-sm font-semibold text-[#071B2D]">{siteConfig.contato.endereco}</div>
               </a>
-
-              <Link
-                href="/cotacao"
-                className="block text-center bg-[#C5A15A] text-[#071B2D] font-bold uppercase tracking-wide py-3.5 rounded hover:bg-[#071B2D] hover:text-white transition-colors"
-              >
-                Solicitar Contato
-              </Link>
             </div>
 
             {/* FORMULÁRIO DE MENSAGEM */}

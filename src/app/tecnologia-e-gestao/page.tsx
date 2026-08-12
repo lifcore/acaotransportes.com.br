@@ -67,7 +67,7 @@ export default function TecnologiaEGestaoPage() {
             </div>
             <div className="rounded-lg overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1600320254374-ce2d293c324e?auto=format&fit=crop&w=1200&q=80"
+                src="/images/tecnologia-app-motorista.jpg"
                 alt="Motorista utilizando aplicativo no veículo"
                 className="w-full h-auto object-cover"
               />
@@ -82,7 +82,7 @@ export default function TecnologiaEGestaoPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="rounded-lg overflow-hidden shadow-md order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1551913363-3ee43854c682?auto=format&fit=crop&w=1200&q=80"
+                src="/images/tecnologia-monitoramento.jpg"
                 alt="Motorista ao volante durante a operação"
                 className="w-full h-auto object-cover"
               />

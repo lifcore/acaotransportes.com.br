@@ -42,7 +42,11 @@ export default function Footer() {
           <div>
             <h4 className="text-md font-semibold text-white mb-4 border-b border-[#123B57] pb-2">Atendimento</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/cotacao" className="text-[#C5A15A] font-bold hover:underline">Solicitar Contato</Link></li>
+              <li>
+                <a href={siteConfig.contato.whatsappLink('Olá, gostaria de falar com o Depto. Comercial da Ação Transportes.')} target="_blank" rel="noreferrer" className="text-[#C5A15A] font-bold hover:underline">
+                  Solicitar Contato
+                </a>
+              </li>
               <li><Link href="/contato" className="hover:text-[#7894A8]">Canais de Contato</Link></li>
               <li>
                 <a href={siteConfig.contato.whatsappLink('Atendimento comercial via site')} target="_blank" rel="noreferrer" className="hover:text-[#7894A8]">

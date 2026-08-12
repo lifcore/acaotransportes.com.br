@@ -9,7 +9,7 @@ const solucoesList = [
   {
     title: 'Refrigerados',
     desc: 'Operações com controle de temperatura conforme a necessidade.',
-    image: 'https://images.unsplash.com/photo-1720811559371-7b0ebd219127?auto=format&fit=crop&w=800&q=80',
+    image: '/images/solucoes-refrigerados.jpg',
   },
   {
     title: 'Congelados',
@@ -19,7 +19,7 @@ const solucoesList = [
   {
     title: 'Químicos e Produtos Perigosos',
     desc: 'Maior controle, documentação, segurança e conformidade.',
-    image: 'https://images.unsplash.com/photo-1783247007596-cca4a61a16f5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/solucoes-quimicos.jpg',
   },
   {
     title: 'Veículos Dedicados',

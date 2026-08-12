@@ -40,12 +40,14 @@ export default function HomePage() {
               Cargas gerais, refrigeradas e congeladas, produtos químicos e perigosos, coletas, entregas e veículos dedicados.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                href="/cotacao"
+              <a
+                href={siteConfig.contato.whatsappLink('Olá, gostaria de falar com o Depto. Comercial da Ação Transportes.')}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded bg-[#C5A15A] px-8 py-4 text-sm font-bold uppercase tracking-wide text-[#071B2D] transition-colors hover:bg-white"
               >
                 Solicitar Contato
-              </Link>
+              </a>
               <Link
                 href="/solucoes"
                 className="rounded border border-[#7894A8] px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#123B57]"
@@ -210,12 +212,14 @@ export default function HomePage() {
             Conte para a Ação Transportes o que você precisa transportar. Nossos especialistas analisarão sua demanda para apresentar a solução ideal.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/cotacao"
+            <a
+              href={siteConfig.contato.whatsappLink('Olá, gostaria de falar com o Depto. Comercial da Ação Transportes.')}
+              target="_blank"
+              rel="noreferrer"
               className="inline-block rounded bg-[#C5A15A] px-8 py-4 text-sm font-bold uppercase tracking-wide text-[#071B2D] transition-colors hover:bg-white"
             >
               Solicitar Contato
-            </Link>
+            </a>
             <Link
               href="/trabalhe-conosco"
               className="inline-block rounded border border-[#7894A8] px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#123B57]"
