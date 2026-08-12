@@ -9,7 +9,7 @@ export default function Footer() {
 
           {/* COLUNA 1: EMPRESA */}
           <div>
-            <img src="/images/logo.png" alt="Ação Transportes" className="h-10 w-auto mb-4" />
+            <img src="/images/logo.png" alt="Ação Transportes" className="h-[100px] w-auto mb-4" />
             <p className="text-sm text-gray-300 mb-4 leading-relaxed">
               Mais de 30 anos de experiência conectando empresas com inteligência, gestão, segurança e eficiência operacional.
             </p>

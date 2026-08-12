@@ -4,9 +4,9 @@ import { siteConfig } from '@/config/site';
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#071B2D] text-white shadow-md border-b border-[#123B57]">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-3">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-2">
         <Link href="/" className="flex items-center">
-          <img src="/images/logo.png" alt="Ação Transportes" className="h-10 w-auto" />
+          <img src="/images/logo.png" alt="Ação Transportes" className="h-[68px] w-auto" />
         </Link>
 
         {/* NAVEGAÇÃO PRINCIPAL */}
