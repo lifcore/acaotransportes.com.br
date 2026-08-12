@@ -14,7 +14,7 @@ const solucoesList = [
   {
     title: 'Congelados',
     desc: 'Veículos preparados para temperaturas negativas, conforme especificação.',
-    image: null,
+    image: '/images/solucoes-congelados.jpg',
   },
   {
     title: 'Químicos e Produtos Perigosos',
@@ -24,12 +24,12 @@ const solucoesList = [
   {
     title: 'Veículos Dedicados',
     desc: 'Veículo direcionado exclusivamente para uma operação, rota ou necessidade específica.',
-    image: null,
+    image: '/images/solucoes-veiculos-dedicados.jpg',
   },
   {
     title: 'Coletas e Entregas',
     desc: 'Operações programadas ou sob demanda.',
-    image: null,
+    image: '/images/solucoes-coletas-entregas.jpg',
   },
 ];
 
