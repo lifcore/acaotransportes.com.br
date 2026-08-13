@@ -1,10 +1,43 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { siteConfig } from '@/config/site';
 
 export default function ContatoPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
+    const form = e.currentTarget;
+    const data = {
+      nome: (form.elements.namedItem('nome') as HTMLInputElement).value,
+      empresa: (form.elements.namedItem('empresa') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      telefone: (form.elements.namedItem('telefone') as HTMLInputElement).value,
+      cidade: (form.elements.namedItem('cidade') as HTMLInputElement).value,
+      assunto: (form.elements.namedItem('assunto') as HTMLInputElement).value,
+      mensagem: (form.elements.namedItem('mensagem') as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Falha no envio');
+      setSubmitted(true);
+    } catch {
+      setError('Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.');
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <>
@@ -76,50 +109,55 @@ export default function ContatoPage() {
                   <p className="text-sm text-gray-300">Nossa equipe vai retornar em breve.</p>
                 </div>
               ) : (
-                <form
-                  onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-                  className="bg-white p-8 rounded border border-gray-200 space-y-6"
-                >
+                <form onSubmit={handleSubmit} className="bg-white p-8 rounded border border-gray-200 space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-[#071B2D] mb-1">Nome *</label>
-                      <input required type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
+                      <input required name="nome" type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-[#071B2D] mb-1">Empresa</label>
-                      <input type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
+                      <input name="empresa" type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-[#071B2D] mb-1">E-mail *</label>
-                      <input required type="email" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
+                      <input required name="email" type="email" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-[#071B2D] mb-1">Telefone / WhatsApp *</label>
-                      <input required type="tel" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
+                      <input required name="telefone" type="tel" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-[#071B2D] mb-1">Cidade</label>
-                      <input type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
+                      <input name="cidade" type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                     </div>
                     <div>
                       <label className="block text-xs font-bold text-[#071B2D] mb-1">Assunto</label>
-                      <input type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
+                      <input name="assunto" type="text" className="w-full border border-gray-300 p-2.5 rounded text-sm" />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-xs font-bold text-[#071B2D] mb-1">Mensagem *</label>
-                    <textarea required rows={4} className="w-full border border-gray-300 p-2.5 rounded text-sm"></textarea>
+                    <textarea required name="mensagem" rows={4} className="w-full border border-gray-300 p-2.5 rounded text-sm"></textarea>
                   </div>
 
-                  <button type="submit" className="w-full bg-[#123B57] text-white font-bold uppercase tracking-wide py-3.5 rounded transition-colors hover:bg-[#071B2D]">
-                    Enviar Mensagem
+                  {error && (
+                    <p className="text-sm text-red-600 font-medium">{error}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-[#123B57] text-white font-bold uppercase tracking-wide py-3.5 rounded transition-colors hover:bg-[#071B2D] disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {loading ? 'Enviando...' : 'Enviar Mensagem'}
                   </button>
                 </form>
               )}
